@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "CommentsLayout metadata",
+    title: "UserLayout metadata",
 };
 
 type Props = {
     children: React.ReactNode;
 };
 
-const CommentsLayout  = ({ children }: Props) => {
+const UserLayout = ({ children }: Props) => {
     return (
         <>
-            CommentsLayout
+            UserLayout
             {children}
         </>
     );
 };
 
-export default CommentsLayout;
+export default UserLayout;
 
