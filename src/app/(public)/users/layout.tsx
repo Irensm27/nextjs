@@ -11,7 +11,7 @@ type Props = {
 const UsersLayout = ({ children }: Props) => {
     return (
         <>
-            UsersLayout
+
             {children}
         </>
     );
