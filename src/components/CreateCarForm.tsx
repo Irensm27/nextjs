@@ -1,20 +1,21 @@
 'use client';
 import React from 'react';
 import {useForm} from "react-hook-form";
-import {carSchema, CarSchemaData} from "@/src/validators/car.validator";
-import {zodResolver} from "@hookform/resolvers/zod";
+import {carValidators} from "@/src/validators/car.validator";
 import {createCarAction} from "@/src/actions/car.actions";
+import {ICarPost} from "@/src/models/ICarPost";
+import {joiResolver} from "@hookform/resolvers/joi";
 
 
 const CreateCarForm = () => {
-    const {register, handleSubmit, formState:{errors}} = useForm<CarSchemaData>(
+    const {register, handleSubmit, formState:{errors}} = useForm<ICarPost>(
         {
-            resolver:zodResolver(carSchema),
+            resolver:joiResolver(carValidators),
             mode: "onChange"
         }
     );
 
-    const onSubmit = async (data: CarSchemaData) => {
+    const onSubmit = async (data: ICarPost) => {
         await createCarAction(data);
     }
     return (

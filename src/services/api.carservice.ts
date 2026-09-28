@@ -1,5 +1,5 @@
 import {ICars} from "@/src/models/ICars";
-import {CarSchemaData} from "@/src/validators/car.validator";
+import {ICarPost} from "@/src/models/ICarPost";
 
 
 const baseUrl = 'http://bigbird.space/carsAPI/v1'
@@ -9,7 +9,7 @@ export const getAllCars = async ():Promise<ICars[]> => {
         .then(value => value.json())
 }
 
-export const postCar = async (car: CarSchemaData):Promise<ICars> => {
+export const postCar = async (car: ICarPost):Promise<ICars> => {
     return await fetch(baseUrl+'/cars',{
         method:'POST',
         headers:{

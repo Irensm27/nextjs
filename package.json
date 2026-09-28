@@ -14,7 +14,8 @@
     "react-dom": "19.2.8",
     "@hookform/resolvers": "^5.9.1",
     "react-hook-form": "^7.88.0",
-    "zod": "^4.6.5"
+    "zod": "^4.6.5",
+    "joi": "^18.2.9"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
